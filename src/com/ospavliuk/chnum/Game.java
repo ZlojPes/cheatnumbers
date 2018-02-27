@@ -101,26 +101,34 @@ public class Game {
         generalLog.add(full);
         gui.setScoreButtonsEnabled(false);
         gui.numberInput.setText("");
-        gui.setKeyboardEnabled(true);
+        gui.setKeyboardEnabled();
         gui.print(full);
-        ArrayList<int[]> list = (new ArtInt(generalLog)).getCombinations();
-        if (gui.deepABox.isSelected() && generalLog.size() > 1) {
-            list = deepAnalysis(list);
-        }
+//        ArrayList<int[]> list = new ArtInt(generalLog).getCombinations();
 
         if (generalLog.size() > 1) {
-            gui.printVars(list);
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    ArrayList<int[]> list = new ArtInt(generalLog).getCombinations();
+                    if (gui.deepABox.isSelected()) {
+                        gui.printVars(deepAnalysis(list));
+                        return;
+                    }
+                    gui.printVars(list);
+                }
+            }).start();
         }
     }
 
-    private ArrayList<int[]> deepAnalysis(ArrayList<int[]> list) {
+    private ArrayList<int[]> deepAnalysis(ArrayList<int[]> inputList) {
         isDARunning = true;
         int[] totalMax = new int[5];
         int[] totalMin = new int[5];
         ArrayList<int[]> output = new ArrayList<>();
         long start = System.currentTimeMillis();
 
-        for (int[] aList : list) {
+        for (int i = 0; i < inputList.size(); i++) {
+            int[] aList = inputList.get(i);
             int currentMax = testAll(aList);
             int[] toOutput = new int[]{aList[0], aList[1], aList[2], aList[3], currentMax};
             output.add(toOutput);
@@ -132,13 +140,14 @@ public class Game {
                 totalMin = toOutput;
             }
 
-//            float f = 100.0F / (float) list.size() * (float) (i + 1);
-//            gui.jProgressBar1.setValue((int) f);
+            float f = 100.0F / (float) inputList.size() * (float) (i + 1);
+            gui.jProgressBar1.setValue((int) f);
 //            gui.jProgressBar1.update(gui.jProgressBar1.getGraphics());
         }
         System.out.println(System.currentTimeMillis() - start);
         gui.maxField.setText("(" + totalMax[0] + totalMax[1] + totalMax[2] + totalMax[3] + ")" + totalMax[4]);
         gui.minField.setText("(" + totalMin[0] + totalMin[1] + totalMin[2] + totalMin[3] + ")" + totalMin[4]);
+        isDARunning = false;
         return output;
     }
 }
