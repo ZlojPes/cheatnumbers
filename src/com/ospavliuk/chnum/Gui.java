@@ -83,7 +83,6 @@ public class Gui extends JFrame {
     final JLabel l41 = new JLabel();
     final JLabel l42 = new JLabel();
     final JLabel l44 = new JLabel();
-    Label label1;
     TextField maxField;
     private Label maxLabel;
     TextField minField;
@@ -135,7 +134,6 @@ public class Gui extends JFrame {
         this.maxLabel = new Label();
         this.minLabel = new Label();
         this.minField = new TextField();
-        this.label1 = new Label();
         this.setDefaultCloseOperation(3);
         this.setTitle("Cheated Numbers");
         this.setLocation(new Point(150, 100));
@@ -355,195 +353,182 @@ public class Gui extends JFrame {
                 Gui.this.autoScoreBoxActionPerformed(evt);
             }
         });
-        this.bestButton.setText("Best");
-        this.deepABox.setText("deep analysis");
-        this.deepABox.addActionListener(new ActionListener() {
+        bestButton.setText("Best");
+        deepABox.setText("deep analysis");
+        deepABox.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Gui.this.deepABoxActionPerformed(evt);
             }
         });
-        this.jProgressBar1.setStringPainted(true);
-        this.maxField.setEditable(false);
-        this.maxField.setText("0");
-        this.maxField.addMouseListener(new MouseAdapter() {
+        jProgressBar1.setStringPainted(true);
+        maxField.setEditable(false);
+        maxField.setText("0");
+        maxField.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
                 Gui.this.maxFieldMouseClicked(evt);
             }
         });
-        this.maxLabel.setText("Max");
-        this.minLabel.setText("Min");
-        this.minField.setEditable(false);
-        this.minField.setText("0");
-        this.minField.addMouseListener(new MouseAdapter() {
+        maxLabel.setText("Max");
+        minLabel.setText("Min");
+        minField.setEditable(false);
+        minField.setText("0");
+        minField.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
                 Gui.this.minFieldMouseClicked(evt);
             }
         });
-        this.label1.setText("0");
-        GroupLayout layout = new GroupLayout(this.getContentPane());
-        this.getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGap(36, 36, 36).addComponent(this.b00).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.l00, -2, 33, -2).addPreferredGap(ComponentPlacement.UNRELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addGroup(layout.createSequentialGroup().addComponent(this.b11).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.l11, -1, -1, 32767)).addGroup(layout.createSequentialGroup().addComponent(this.b10).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.l10, -2, 32, -2))).addPreferredGap(ComponentPlacement.UNRELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addGroup(layout.createSequentialGroup().addComponent(this.b20).addPreferredGap(ComponentPlacement.RELATED, -1, 32767).addComponent(this.l20, -2, 33, -2).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(this.b30)).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING, false).addGroup(layout.createSequentialGroup().addComponent(this.b22).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.l22, -1, -1, 32767)).addGroup(layout.createSequentialGroup().addComponent(this.b21).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.l21, -2, 33, -2))).addPreferredGap(ComponentPlacement.UNRELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.b32).addComponent(this.b31).addComponent(this.b33)))).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.TRAILING).addGroup(layout.createSequentialGroup().addComponent(this.l30, -2, 33, -2).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(this.b40)).addGroup(layout.createSequentialGroup().addComponent(this.l31, -2, 33, -2).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(this.b41)).addGroup(layout.createSequentialGroup().addComponent(this.l32, -2, 35, -2).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(this.b42))).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addComponent(this.l40, -1, 35, 32767).addComponent(this.l41, -1, -1, 32767).addComponent(this.l42, -1, -1, 32767))).addComponent(this.l33, -2, 35, -2)).addContainerGap(-1, 32767)).addGroup(layout.createSequentialGroup().addContainerGap().addComponent(this.jScrollPane1, -2, 79, -2).addGap(18, 18, 18).addGroup(layout.createParallelGroup(Alignment.TRAILING).addComponent(this.startButton, -2, 91, -2).addComponent(this.jScrollPane2, -2, 95, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addComponent(this.deepABox, -1, 111, 32767).addComponent(this.autoScoreBox, -1, 105, 32767).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING, false).addComponent(this.maxLabel, -1, -1, 32767).addComponent(this.minLabel, -1, -1, 32767)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addComponent(this.maxField, -1, 76, 32767).addComponent(this.minField, -1, -1, 32767))).addGroup(layout.createSequentialGroup().addGap(17, 17, 17).addComponent(this.bestButton, -2, 53, -2)).addComponent(this.jProgressBar1, -2, 0, 32767)).addPreferredGap(ComponentPlacement.RELATED, 12, 32767).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.jButton1, -2, 62, -2).addComponent(this.jButton7, -2, 62, -2).addComponent(this.jButton4, -2, 62, -2).addComponent(this.jButtonBack, -2, 62, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addComponent(this.jButton2, Alignment.TRAILING, -2, 62, -2).addComponent(this.jButton8, Alignment.TRAILING, -2, 62, -2).addComponent(this.jButton5, Alignment.TRAILING, -2, 62, -2).addComponent(this.jButton0, -2, 62, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.jButton9, -2, 62, -2).addComponent(this.jButton6, -2, 62, -2).addComponent(this.jButton3, Alignment.TRAILING, -2, 62, -2).addComponent(this.enterButton, Alignment.TRAILING, -2, 62, -2))).addGroup(layout.createSequentialGroup().addComponent(this.numberInput, -2, 73, -2).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.l44).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.label1, -2, -1, -2))).addGap(0, 7, 32767)));
-        layout.setVerticalGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addContainerGap().addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.b00).addComponent(this.l00).addComponent(this.b10).addComponent(this.b20).addComponent(this.b30).addComponent(this.b40).addComponent(this.l10).addComponent(this.l20).addComponent(this.l30).addComponent(this.l40)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.b11).addComponent(this.l11).addComponent(this.b21).addComponent(this.b31).addComponent(this.b41).addComponent(this.l31).addComponent(this.l41).addComponent(this.l21)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.b42).addComponent(this.b32).addComponent(this.b22).addComponent(this.l22).addComponent(this.l32).addComponent(this.l42)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.b33).addComponent(this.l33)).addGap(10, 10, 10).addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.label1, -2, -1, -2).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.bestButton, -2, 34, -2).addComponent(this.numberInput, -2, 34, -2).addComponent(this.l44))).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.jButton1, -2, 37, -2).addComponent(this.jButton2, -2, 37, -2).addComponent(this.jButton3, -2, 37, -2)).addGap(3, 3, 3).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.jButton4, -2, 37, -2).addComponent(this.jButton5, -2, 37, -2).addComponent(this.jButton6, -2, 37, -2))).addGroup(layout.createSequentialGroup().addComponent(this.autoScoreBox).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.deepABox).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(this.jProgressBar1, -2, -1, -2))).addGap(3, 3, 3).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.jButton7, -2, 37, -2).addGroup(Alignment.TRAILING, layout.createParallelGroup(Alignment.BASELINE).addComponent(this.jButton8, -2, 37, -2).addComponent(this.jButton9, -2, 37, -2))).addGap(2, 2, 2).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.jButton0, -2, 37, -2).addComponent(this.jButtonBack, -2, 37, -2).addComponent(this.enterButton, -2, 37, -2))).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.maxLabel, -2, -1, -2).addComponent(this.maxField, -2, -1, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.minField, -2, -1, -2).addComponent(this.minLabel, -2, -1, -2))))).addGroup(layout.createSequentialGroup().addComponent(this.jScrollPane2, -2, 214, -2).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.startButton, -2, 38, -2))).addGap(0, 20, 32767)).addComponent(this.jScrollPane1)).addContainerGap()));
-        this.pack();
+        GroupLayout layout = new GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGap(36, 36, 36).addComponent(this.b00).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.l00, -2, 33, -2).addPreferredGap(ComponentPlacement.UNRELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addGroup(layout.createSequentialGroup().addComponent(this.b11).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.l11, -1, -1, 32767)).addGroup(layout.createSequentialGroup().addComponent(this.b10).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.l10, -2, 32, -2))).addPreferredGap(ComponentPlacement.UNRELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addGroup(layout.createSequentialGroup().addComponent(this.b20).addPreferredGap(ComponentPlacement.RELATED, -1, 32767).addComponent(this.l20, -2, 33, -2).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(this.b30)).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING, false).addGroup(layout.createSequentialGroup().addComponent(this.b22).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.l22, -1, -1, 32767)).addGroup(layout.createSequentialGroup().addComponent(this.b21).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.l21, -2, 33, -2))).addPreferredGap(ComponentPlacement.UNRELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.b32).addComponent(this.b31).addComponent(this.b33)))).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.TRAILING).addGroup(layout.createSequentialGroup().addComponent(this.l30, -2, 33, -2).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(this.b40)).addGroup(layout.createSequentialGroup().addComponent(this.l31, -2, 33, -2).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(this.b41)).addGroup(layout.createSequentialGroup().addComponent(this.l32, -2, 35, -2).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(this.b42))).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addComponent(this.l40, -1, 35, 32767).addComponent(this.l41, -1, -1, 32767).addComponent(this.l42, -1, -1, 32767))).addComponent(this.l33, -2, 35, -2)).addContainerGap(-1, 32767)).addGroup(layout.createSequentialGroup().addContainerGap().addComponent(this.jScrollPane1, -2, 79, -2).addGap(18, 18, 18).addGroup(layout.createParallelGroup(Alignment.TRAILING).addComponent(this.startButton, -2, 91, -2).addComponent(this.jScrollPane2, -2, 95, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addComponent(this.deepABox, -1, 111, 32767).addComponent(this.autoScoreBox, -1, 105, 32767).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING, false).addComponent(this.maxLabel, -1, -1, 32767).addComponent(this.minLabel, -1, -1, 32767)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addComponent(this.maxField, -1, 76, 32767).addComponent(this.minField, -1, -1, 32767))).addGroup(layout.createSequentialGroup().addGap(17, 17, 17).addComponent(this.bestButton, -2, 53, -2)).addComponent(this.jProgressBar1, -2, 0, 32767)).addPreferredGap(ComponentPlacement.RELATED, 12, 32767).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.jButton1, -2, 62, -2).addComponent(this.jButton7, -2, 62, -2).addComponent(this.jButton4, -2, 62, -2).addComponent(this.jButtonBack, -2, 62, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addComponent(this.jButton2, Alignment.TRAILING, -2, 62, -2).addComponent(this.jButton8, Alignment.TRAILING, -2, 62, -2).addComponent(this.jButton5, Alignment.TRAILING, -2, 62, -2).addComponent(this.jButton0, -2, 62, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.jButton9, -2, 62, -2).addComponent(this.jButton6, -2, 62, -2).addComponent(this.jButton3, Alignment.TRAILING, -2, 62, -2).addComponent(this.enterButton, Alignment.TRAILING, -2, 62, -2))).addGroup(layout.createSequentialGroup().addComponent(this.numberInput, -2, 73, -2).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.l44).addPreferredGap(ComponentPlacement.RELATED))).addGap(0, 7, 32767)));
+        layout.setVerticalGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addContainerGap().addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.b00).addComponent(this.l00).addComponent(this.b10).addComponent(this.b20).addComponent(this.b30).addComponent(this.b40).addComponent(this.l10).addComponent(this.l20).addComponent(this.l30).addComponent(this.l40)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.b11).addComponent(this.l11).addComponent(this.b21).addComponent(this.b31).addComponent(this.b41).addComponent(this.l31).addComponent(this.l41).addComponent(this.l21)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.b42).addComponent(this.b32).addComponent(this.b22).addComponent(this.l22).addComponent(this.l32).addComponent(this.l42)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.b33).addComponent(this.l33)).addGap(10, 10, 10).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.bestButton, -2, 34, -2).addComponent(this.numberInput, -2, 34, -2).addComponent(this.l44))).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.jButton1, -2, 37, -2).addComponent(this.jButton2, -2, 37, -2).addComponent(this.jButton3, -2, 37, -2)).addGap(3, 3, 3).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.jButton4, -2, 37, -2).addComponent(this.jButton5, -2, 37, -2).addComponent(this.jButton6, -2, 37, -2))).addGroup(layout.createSequentialGroup().addComponent(this.autoScoreBox).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.deepABox).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(this.jProgressBar1, -2, -1, -2))).addGap(3, 3, 3).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.jButton7, -2, 37, -2).addGroup(Alignment.TRAILING, layout.createParallelGroup(Alignment.BASELINE).addComponent(this.jButton8, -2, 37, -2).addComponent(this.jButton9, -2, 37, -2))).addGap(2, 2, 2).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.jButton0, -2, 37, -2).addComponent(this.jButtonBack, -2, 37, -2).addComponent(this.enterButton, -2, 37, -2))).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.maxLabel, -2, -1, -2).addComponent(this.maxField, -2, -1, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.minField, -2, -1, -2).addComponent(this.minLabel, -2, -1, -2))))).addGroup(layout.createSequentialGroup().addComponent(this.jScrollPane2, -2, 214, -2).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.startButton, -2, 38, -2))).addGap(0, 20, 32767)).addComponent(this.jScrollPane1)).addContainerGap()));
+        pack();
     }
 
     private void jButtonAllActionPerformed(ActionEvent evt) {
-        this.numberInput.setText(this.numberInput.getText() + ((JButton)evt.getSource()).getText());
-        this.setUsedKeysDisabled();
+        numberInput.setText(numberInput.getText() + ((JButton) evt.getSource()).getText());
+        setUsedKeysDisabled();
     }
 
     private void enterButtonActionPerformed(ActionEvent evt) {
-        String text = this.numberInput.getText();
+        String text = numberInput.getText();
         UniqueDigits un = new UniqueDigits(text.toCharArray());
         if (un.isValidNumber()) {
-            this.game.testAll(un.getIntArray());
+            game.testAll(un.getIntArray());
         }
 
     }
 
     private void jButtonBackActionPerformed(ActionEvent evt) {
-        String text = this.numberInput.getText();
+        String text = numberInput.getText();
         if (text.length() > 0) {
-            this.numberInput.setText(text.substring(0, text.length() - 1));
-            this.setUsedKeysDisabled();
+            numberInput.setText(text.substring(0, text.length() - 1));
+            setUsedKeysDisabled();
         } else {
-            this.jButtonBack.setEnabled(false);
+            jButtonBack.setEnabled(false);
         }
 
     }
 
     private void numberInputCaretUpdate(CaretEvent evt) {
-        this.enterButton.setEnabled(this.numberInput.getText().length() == 4);
-        this.l44.setEnabled(false);
+        enterButton.setEnabled(numberInput.getText().length() == 4);
+        l44.setEnabled(false);
     }
 
     private void numberInputActionPerformed(ActionEvent evt) {
-        this.enterButtonActionPerformed(evt);
+        enterButtonActionPerformed(evt);
     }
 
     private void numberInputKeyReleased(KeyEvent evt) {
-        this.setUsedKeysDisabled();
+        setUsedKeysDisabled();
     }
 
     private void startButtonActionPerformed(ActionEvent evt) {
-        this.setScoreButtonsEnabled(true);
-        this.resetLabels();
-        this.game = new Game(this);
-        this.jProgressBar1.setValue(0);
-        this.maxField.setText("0");
-        this.minField.setText("0");
+        setScoreButtonsEnabled(true);
+        resetLabels();
+        game = new Game(this);
+        jProgressBar1.setValue(0);
+        maxField.setText("0");
+        minField.setText("0");
     }
 
     private void autoScoreBoxActionPerformed(ActionEvent evt) {
-        this.bestButton.setEnabled(!this.autoScoreBox.isSelected());
+        bestButton.setEnabled(!this.autoScoreBox.isSelected());
     }
 
     private void scoreButtonsActionPerformed(ActionEvent evt) {
-        this.l44.setEnabled(false);
-        this.variantsPane.setText("");
-        this.game.getManualScore((JButton)evt.getSource());
+        l44.setEnabled(false);
+        variantsPane.setText("");
+        game.getManualScore((JButton) evt.getSource());
     }
 
     private void deepABoxActionPerformed(ActionEvent evt) {
-        this.autoScoreBox.setEnabled(!this.deepABox.isSelected());
-        this.autoScoreBox.setSelected(false);
-        this.jProgressBar1.setEnabled(this.deepABox.isSelected());
-        this.maxLabel.setEnabled(this.deepABox.isSelected());
-        this.minLabel.setEnabled(this.deepABox.isSelected());
-        this.maxField.setEnabled(this.deepABox.isSelected());
-        this.minField.setEnabled(this.deepABox.isSelected());
+        autoScoreBox.setEnabled(!this.deepABox.isSelected());
+        autoScoreBox.setSelected(false);
+        jProgressBar1.setEnabled(this.deepABox.isSelected());
+        maxLabel.setEnabled(this.deepABox.isSelected());
+        minLabel.setEnabled(this.deepABox.isSelected());
+        maxField.setEnabled(this.deepABox.isSelected());
+        minField.setEnabled(this.deepABox.isSelected());
     }
 
     private void maxFieldMouseClicked(MouseEvent evt) {
-        this.numberInput.setText(this.maxField.getText().substring(1, 5));
+        numberInput.setText(this.maxField.getText().substring(1, 5));
     }
 
     private void minFieldMouseClicked(MouseEvent evt) {
-        this.numberInput.setText(this.minField.getText().substring(1, 5));
+        numberInput.setText(this.minField.getText().substring(1, 5));
     }
 
     public static void main(String[] args) {
         try {
-            LookAndFeelInfo[] var1 = UIManager.getInstalledLookAndFeels();
-            int var2 = var1.length;
+            LookAndFeelInfo[] laf = UIManager.getInstalledLookAndFeels();
 
-            for(int var3 = 0; var3 < var2; ++var3) {
-                LookAndFeelInfo info = var1[var3];
+            for (LookAndFeelInfo info : laf) {
                 if ("Nimbus".equals(info.getName())) {
                     UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ClassNotFoundException var5) {
-            Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, (String)null, var5);
-        } catch (InstantiationException var6) {
-            Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, (String)null, var6);
-        } catch (IllegalAccessException var7) {
-            Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, (String)null, var7);
-        } catch (UnsupportedLookAndFeelException var8) {
-            Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, (String)null, var8);
+        } catch (ClassNotFoundException | InstantiationException | UnsupportedLookAndFeelException | IllegalAccessException e) {
+            Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, (String) null, e);
         }
 
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                (new Gui()).setVisible(true);
-            }
-        });
+        EventQueue.invokeLater(() -> (new Gui()).setVisible(true));
     }
 
-    void setUsedKeysDisabled() {
-        char[] text = this.numberInput.getText().toCharArray();
-        int caret = this.numberInput.getCaretPosition();
+    private void setUsedKeysDisabled() {
+        char[] text = numberInput.getText().toCharArray();
+        int caret = numberInput.getCaretPosition();
         UniqueDigits ud = new UniqueDigits(text);
         List<Integer> output = ud.normalize();
 
-        for(int i = 0; i < 10; ++i) {
+        for (int i = 0; i < 10; ++i) {
             this.keyboard[i].setEnabled(!output.contains(i));
         }
 
         String t = "";
 
         int i;
-        for(Iterator var6 = output.iterator(); var6.hasNext(); t = t + i) {
-            i = (Integer)var6.next();
+        for (Iterator var6 = output.iterator(); var6.hasNext(); t = t + i) {
+            i = (Integer) var6.next();
         }
 
-        this.numberInput.setText(t);
-        this.jButtonBack.setEnabled(t.length() > 0);
-        this.numberInput.setCaretPosition(caret < t.length() ? caret : t.length());
-        this.numberInput.setCaretColor(t.length() < 4 ? Color.GREEN : Color.RED);
+        numberInput.setText(t);
+        jButtonBack.setEnabled(t.length() > 0);
+        numberInput.setCaretPosition(caret < t.length() ? caret : t.length());
+        numberInput.setCaretColor(t.length() < 4 ? Color.GREEN : Color.RED);
     }
 
     void setKeyboardEnabled(boolean en) {
-        JButton[] var2 = this.keyboard;
+        JButton[] var2 = keyboard;
         int var3 = var2.length;
 
-        for(int var4 = 0; var4 < var3; ++var4) {
+        for (int var4 = 0; var4 < var3; ++var4) {
             JButton b = var2[var4];
             b.setEnabled(en);
         }
 
-        this.numberInput.setEnabled(en);
-        this.jButtonBack.setEnabled(en && this.numberInput.getText().length() > 0);
-        this.enterButton.setEnabled(en && this.numberInput.getText().length() == 4);
+        numberInput.setEnabled(en);
+        jButtonBack.setEnabled(en && numberInput.getText().length() > 0);
+        enterButton.setEnabled(en && numberInput.getText().length() == 4);
     }
 
     void resetGui() {
-        this.numberInput.setText("");
-        this.historyPane.setText("");
-        this.variantsPane.setText("");
-        this.setKeyboardEnabled(true);
+        numberInput.setText("");
+        historyPane.setText("");
+        variantsPane.setText("");
+        setKeyboardEnabled(true);
     }
 
     void print(int[] array) {
-        this.historyPane.setText(this.historyPane.getText() + "" + array[0] + array[1] + array[2] + array[3] + " - " + array[4] + ":" + array[5] + "\n");
+        historyPane.setText(historyPane.getText() + "" + array[0] + array[1] + array[2] + array[3] + " - " + array[4] + ":" + array[5] + "\n");
     }
 
     void setScoreButtonsEnabled(boolean en) {
         JButton[] var2 = this.scoreButtonArray;
         int var3 = var2.length;
 
-        for(int var4 = 0; var4 < var3; ++var4) {
+        for (int var4 = 0; var4 < var3; ++var4) {
             JButton b = var2[var4];
             b.setEnabled(en);
         }
@@ -551,24 +536,29 @@ public class Gui extends JFrame {
     }
 
     void printVars(ArrayList<int[]> list) {
-        for(int i = 0; i < list.size(); ++i) {
-            int[] array = (int[])list.get(i);
-            String text = this.variantsPane.getText() + array[0] + array[1] + array[2] + array[3];
-            this.variantsPane.setText(array.length == 4 ? text + "\n" : text + "-" + array[4] + "\n");
+        long start = System.currentTimeMillis();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < list.size(); ++i) {
+            int[] array = (int[]) list.get(i);
+            String text = "" + array[0] + array[1] + array[2] + array[3];
+            sb.append(array.length == 4 ? text + "\n" : text + "-" + array[4] + "\n");
             float f = 100.0F / (float)list.size() * (float)(i + 1);
-            this.jProgressBar1.setValue((int)f);
-            this.jProgressBar1.update(this.jProgressBar1.getGraphics());
+            jProgressBar1.setValue((int)f);
+//            jProgressBar1.update(jProgressBar1.getGraphics());
+            this.repaint();
         }
+        variantsPane.setText(sb.toString());
+        System.out.println(System.currentTimeMillis() - start);
 
-        this.game.isDARunning = false;
-        this.resetLabels();
+        game.isDARunning = false;
+        resetLabels();
     }
 
     void resetLabels() {
-        JLabel[] var1 = this.labelArray;
+        JLabel[] var1 = labelArray;
         int var2 = var1.length;
 
-        for(int var3 = 0; var3 < var2; ++var3) {
+        for (int var3 = 0; var3 < var2; ++var3) {
             JLabel l = var1[var3];
             l.setText("0");
         }
