@@ -81,7 +81,8 @@ public class Gui extends JFrame {
 
     private Gui() {
         initComponents();
-        keyboard = new JButton[]{jButton0, jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9, jButtonBack, enterButton};
+        keyboard = new JButton[]{jButton0, jButton1, jButton2, jButton3, jButton4, jButton5,
+                jButton6, jButton7, jButton8, jButton9, jButtonBack, enterButton};
         labelArray = new JLabel[]{l00, l10, l11, l20, l21, l22, l30, l31, l32, l33, l40, l41, l42};
         scoreButtonArray = new JButton[]{b00, b10, b11, b20, b21, b22, b30, b31, b32, b33, b40, b41, b42};
         enterButton.setEnabled(false);
@@ -121,85 +122,85 @@ public class Gui extends JFrame {
         setTitle("Cheated Numbers");
         setLocation(new Point(150, 100));
         setResizable(false);
+        l00.setText("None");
+        l10.setText("None");
+        l11.setText("None");
+        l20.setText("None");
+        l21.setText("None");
+        l22.setText("None");
+        l30.setText("None");
+        l31.setText("None");
+        l32.setText("None");
+        l33.setText("None");
+        l40.setText("None");
+        l41.setText("None");
+        l42.setText("None");
+        l44.setText("winner");
+        l44.setForeground(new Color(255, 0, 0));
+//        l44.setName("win");
         b00.setText("0:0");
         b00.addActionListener(this::scoreButtonsActionPerformed);
         b10.setText("1:0");
         b10.addActionListener(this::scoreButtonsActionPerformed);
-        b20.setText("2:0");
-        b20.addActionListener(this::scoreButtonsActionPerformed);
-        b30.setText("3:0");
-        b30.addActionListener(this::scoreButtonsActionPerformed);
-        b40.setText("4:0");
-        b40.addActionListener(this::scoreButtonsActionPerformed);
-        l00.setText("None");
-        l10.setText("None");
-        l20.setText("None");
-        l30.setText("None");
-        l40.setText("None");
         b11.setText("1:1");
         b11.addActionListener(this::scoreButtonsActionPerformed);
+        b20.setText("2:0");
+        b20.addActionListener(this::scoreButtonsActionPerformed);
         b21.setText("2:1");
         b21.addActionListener(this::scoreButtonsActionPerformed);
-        b31.setText("3:1");
-        b31.addActionListener(this::scoreButtonsActionPerformed);
-        b41.setText("4:1");
-        b41.addActionListener(this::scoreButtonsActionPerformed);
-        l44.setForeground(new Color(255, 0, 0));
-        l44.setText("winner");
-        l44.setToolTipText("");
-        l44.setName("win");
-        l42.setText("None");
-        l41.setText("None");
-        l11.setText("None");
         b22.setText("2:2");
         b22.addActionListener(this::scoreButtonsActionPerformed);
+        b30.setText("3:0");
+        b30.addActionListener(this::scoreButtonsActionPerformed);
+        b31.setText("3:1");
+        b31.addActionListener(this::scoreButtonsActionPerformed);
         b32.setText("3:2");
         b32.addActionListener(this::scoreButtonsActionPerformed);
-        b42.setText("4:2");
-        b42.addActionListener(this::scoreButtonsActionPerformed);
-        l32.setText("None");
-        l22.setText("None");
-        l21.setText("None");
         b33.setText("3:3");
         b33.addActionListener(this::scoreButtonsActionPerformed);
-        l33.setText("None");
-        l31.setText("None");
+        b40.setText("4:0");
+        b40.addActionListener(this::scoreButtonsActionPerformed);
+        b41.setText("4:1");
+        b41.addActionListener(this::scoreButtonsActionPerformed);
+        b42.setText("4:2");
+        b42.addActionListener(this::scoreButtonsActionPerformed);
+        Dimension keyboard = new Dimension(62, 37);
         jButton1.setText("1");
-        jButton1.setPreferredSize(new Dimension(62, 37));
+        jButton1.setPreferredSize(keyboard);
         jButton1.addActionListener(this::jButtonAllActionPerformed);
         jButton2.setText("2");
-        jButton2.setPreferredSize(new Dimension(62, 37));
+        jButton2.setPreferredSize(keyboard);
         jButton2.addActionListener(this::jButtonAllActionPerformed);
         jButton3.setText("3");
-        jButton3.setPreferredSize(new Dimension(62, 37));
+        jButton3.setPreferredSize(keyboard);
         jButton3.addActionListener(this::jButtonAllActionPerformed);
         jButton6.setText("6");
-        jButton6.setPreferredSize(new Dimension(62, 37));
+        jButton6.setPreferredSize(keyboard);
         jButton6.addActionListener(this::jButtonAllActionPerformed);
         jButton5.setText("5");
-        jButton5.setPreferredSize(new Dimension(62, 37));
+        jButton5.setPreferredSize(keyboard);
         jButton5.addActionListener(this::jButtonAllActionPerformed);
         jButton4.setText("4");
-        jButton4.setPreferredSize(new Dimension(62, 37));
+        jButton4.setPreferredSize(keyboard);
         jButton4.addActionListener(this::jButtonAllActionPerformed);
         jButton7.setText("7");
-        jButton7.setPreferredSize(new Dimension(62, 37));
+        jButton7.setPreferredSize(keyboard);
         jButton7.addActionListener(this::jButtonAllActionPerformed);
         jButton8.setText("8");
-        jButton8.setPreferredSize(new Dimension(62, 37));
+        jButton8.setPreferredSize(keyboard);
         jButton8.addActionListener(this::jButtonAllActionPerformed);
         jButton9.setText("9");
-        jButton9.setPreferredSize(new Dimension(62, 37));
+        jButton9.setPreferredSize(keyboard);
         jButton9.addActionListener(this::jButtonAllActionPerformed);
-        enterButton.setText("ввод");
-        enterButton.setPreferredSize(new Dimension(62, 37));
-        enterButton.addActionListener(evt4 -> enterButtonActionPerformed());
         jButton0.setText("0");
-        jButton0.setPreferredSize(new Dimension(62, 37));
+        jButton0.setPreferredSize(keyboard);
         jButton0.addActionListener(this::jButtonAllActionPerformed);
+        enterButton.setText("ввод");
+        enterButton.setPreferredSize(keyboard);
+        enterButton.addActionListener(e -> enterButtonActionPerformed());
         jButtonBack.setText("назад");
-        jButtonBack.setPreferredSize(new Dimension(62, 37));
-        jButtonBack.addActionListener(evt3 -> jButtonBackActionPerformed());
+        jButtonBack.setPreferredSize(keyboard);
+        jButtonBack.addActionListener(e -> jButtonBackActionPerformed());
         variantsPane.setEditable(false);
         jScrollPane1.setViewportView(variantsPane);
         numberInput.setFont(new Font("Comic Sans MS", Font.BOLD, 24));
@@ -242,8 +243,91 @@ public class Gui extends JFrame {
         });
         GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGap(36, 36, 36).addComponent(b00).addPreferredGap(ComponentPlacement.RELATED).addComponent(l00, -2, 33, -2).addPreferredGap(ComponentPlacement.UNRELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addGroup(layout.createSequentialGroup().addComponent(b11).addPreferredGap(ComponentPlacement.RELATED).addComponent(l11, -1, -1, 32767)).addGroup(layout.createSequentialGroup().addComponent(b10).addPreferredGap(ComponentPlacement.RELATED).addComponent(l10, -2, 32, -2))).addPreferredGap(ComponentPlacement.UNRELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addGroup(layout.createSequentialGroup().addComponent(b20).addPreferredGap(ComponentPlacement.RELATED, -1, 32767).addComponent(l20, -2, 33, -2).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(b30)).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING, false).addGroup(layout.createSequentialGroup().addComponent(b22).addPreferredGap(ComponentPlacement.RELATED).addComponent(l22, -1, -1, 32767)).addGroup(layout.createSequentialGroup().addComponent(b21).addPreferredGap(ComponentPlacement.RELATED).addComponent(l21, -2, 33, -2))).addPreferredGap(ComponentPlacement.UNRELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(b32).addComponent(b31).addComponent(b33)))).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.TRAILING).addGroup(layout.createSequentialGroup().addComponent(l30, -2, 33, -2).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(b40)).addGroup(layout.createSequentialGroup().addComponent(l31, -2, 33, -2).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(b41)).addGroup(layout.createSequentialGroup().addComponent(l32, -2, 35, -2).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(b42))).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addComponent(l40, -1, 35, 32767).addComponent(l41, -1, -1, 32767).addComponent(l42, -1, -1, 32767))).addComponent(l33, -2, 35, -2)).addContainerGap(-1, 32767)).addGroup(layout.createSequentialGroup().addContainerGap().addComponent(jScrollPane1, -2, 79, -2).addGap(18, 18, 18).addGroup(layout.createParallelGroup(Alignment.TRAILING).addComponent(startButton, -2, 91, -2).addComponent(jScrollPane2, -2, 95, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addComponent(deepABox, -1, 111, 32767).addComponent(autoScoreBox, -1, 105, 32767).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING, false).addComponent(maxLabel, -1, -1, 32767).addComponent(minLabel, -1, -1, 32767)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addComponent(maxField, -1, 76, 32767).addComponent(minField, -1, -1, 32767))).addGroup(layout.createSequentialGroup().addGap(17, 17, 17).addComponent(bestButton, -2, 53, -2)).addComponent(jProgressBar1, -2, 0, 32767)).addPreferredGap(ComponentPlacement.RELATED, 12, 32767).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(jButton1, -2, 62, -2).addComponent(jButton7, -2, 62, -2).addComponent(jButton4, -2, 62, -2).addComponent(jButtonBack, -2, 62, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addComponent(jButton2, Alignment.TRAILING, -2, 62, -2).addComponent(jButton8, Alignment.TRAILING, -2, 62, -2).addComponent(jButton5, Alignment.TRAILING, -2, 62, -2).addComponent(jButton0, -2, 62, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(jButton9, -2, 62, -2).addComponent(jButton6, -2, 62, -2).addComponent(jButton3, Alignment.TRAILING, -2, 62, -2).addComponent(enterButton, Alignment.TRAILING, -2, 62, -2))).addGroup(layout.createSequentialGroup().addComponent(numberInput, -2, 73, -2).addPreferredGap(ComponentPlacement.RELATED).addComponent(l44).addPreferredGap(ComponentPlacement.RELATED))).addGap(0, 7, 32767)));
-        layout.setVerticalGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addContainerGap().addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(b00).addComponent(l00).addComponent(b10).addComponent(b20).addComponent(b30).addComponent(b40).addComponent(l10).addComponent(l20).addComponent(l30).addComponent(l40)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(b11).addComponent(l11).addComponent(b21).addComponent(b31).addComponent(b41).addComponent(l31).addComponent(l41).addComponent(l21)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(b42).addComponent(b32).addComponent(b22).addComponent(l22).addComponent(l32).addComponent(l42)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(b33).addComponent(l33)).addGap(10, 10, 10).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(bestButton, -2, 34, -2).addComponent(numberInput, -2, 34, -2).addComponent(l44))).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(jButton1, -2, 37, -2).addComponent(jButton2, -2, 37, -2).addComponent(jButton3, -2, 37, -2)).addGap(3, 3, 3).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(jButton4, -2, 37, -2).addComponent(jButton5, -2, 37, -2).addComponent(jButton6, -2, 37, -2))).addGroup(layout.createSequentialGroup().addComponent(autoScoreBox).addPreferredGap(ComponentPlacement.RELATED).addComponent(deepABox).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(jProgressBar1, -2, -1, -2))).addGap(3, 3, 3).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(jButton7, -2, 37, -2).addGroup(Alignment.TRAILING, layout.createParallelGroup(Alignment.BASELINE).addComponent(jButton8, -2, 37, -2).addComponent(jButton9, -2, 37, -2))).addGap(2, 2, 2).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(jButton0, -2, 37, -2).addComponent(jButtonBack, -2, 37, -2).addComponent(enterButton, -2, 37, -2))).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(maxLabel, -2, -1, -2).addComponent(maxField, -2, -1, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(minField, -2, -1, -2).addComponent(minLabel, -2, -1, -2))))).addGroup(layout.createSequentialGroup().addComponent(jScrollPane2, -2, 214, -2).addPreferredGap(ComponentPlacement.RELATED).addComponent(startButton, -2, 38, -2))).addGap(0, 20, 32767)).addComponent(jScrollPane1)).addContainerGap()));
+        layout.setHorizontalGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().
+                addGap(36, 36, 36).addComponent(b00).addPreferredGap(ComponentPlacement.RELATED).
+                addComponent(l00, -2, 33, -2).addPreferredGap(ComponentPlacement.UNRELATED).
+                addGroup(layout.createParallelGroup(Alignment.LEADING, false).addGroup(layout.createSequentialGroup().
+                addComponent(b11).addPreferredGap(ComponentPlacement.RELATED).addComponent(l11, -1, -1, 32767)).
+                addGroup(layout.createSequentialGroup().addComponent(b10).addPreferredGap(ComponentPlacement.RELATED).
+                addComponent(l10, -2, 32, -2))).addPreferredGap(ComponentPlacement.UNRELATED).
+                addGroup(layout.createParallelGroup(Alignment.LEADING, false).addGroup(layout.createSequentialGroup().
+                addComponent(b20).addPreferredGap(ComponentPlacement.RELATED, -1, 32767).
+                addComponent(l20, -2, 33, -2).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(b30)).
+                addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING, false).
+                addGroup(layout.createSequentialGroup().addComponent(b22).addPreferredGap(ComponentPlacement.RELATED).
+                addComponent(l22, -1, -1, 32767)).addGroup(layout.createSequentialGroup().addComponent(b21).
+                addPreferredGap(ComponentPlacement.RELATED).addComponent(l21, -2, 33, -2))).
+                addPreferredGap(ComponentPlacement.UNRELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).
+                addComponent(b32).addComponent(b31).addComponent(b33)))).addPreferredGap(ComponentPlacement.RELATED).
+                addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().
+                addGroup(layout.createParallelGroup(Alignment.TRAILING).addGroup(layout.createSequentialGroup().
+                addComponent(l30, -2, 33, -2).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(b40)).
+                addGroup(layout.createSequentialGroup().addComponent(l31, -2, 33, -2).
+                addPreferredGap(ComponentPlacement.UNRELATED).addComponent(b41)).addGroup(layout.createSequentialGroup().
+                addComponent(l32, -2, 35, -2).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(b42))).
+                addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).
+                addComponent(l40, -1, 35, 32767).addComponent(l41, -1, -1, 32767).
+                addComponent(l42, -1, -1, 32767))).addComponent(l33, -2, 35, -2)).
+                addContainerGap(-1, 32767)).addGroup(layout.createSequentialGroup().addContainerGap().
+                addComponent(jScrollPane1, -2, 79, -2).addGap(18, 18, 18).
+                addGroup(layout.createParallelGroup(Alignment.TRAILING).addComponent(startButton, -2, 91, -2).
+                addComponent(jScrollPane2, -2, 95, -2)).addPreferredGap(ComponentPlacement.RELATED).
+                addGroup(layout.createParallelGroup(Alignment.LEADING, false).
+                addComponent(deepABox, -1, 111, 32767).addComponent(autoScoreBox, -1, 105, 32767).
+                addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING, false).
+                addComponent(maxLabel, -1, -1, 32767).addComponent(minLabel, -1, -1, 32767)).
+                addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).
+                addComponent(maxField, -1, 76, 32767).addComponent(minField, -1, -1, 32767))).
+                addGroup(layout.createSequentialGroup().addGap(17, 17, 17).addComponent(bestButton, -2, 53, -2)).
+                addComponent(jProgressBar1, -2, 0, 32767)).addPreferredGap(ComponentPlacement.RELATED, 12, 32767).
+                addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().
+                addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(jButton1, -2, 62, -2).
+                addComponent(jButton7, -2, 62, -2).addComponent(jButton4, -2, 62, -2).
+                addComponent(jButtonBack, -2, 62, -2)).addPreferredGap(ComponentPlacement.RELATED).
+                addGroup(layout.createParallelGroup(Alignment.LEADING, false).
+                addComponent(jButton2, Alignment.TRAILING, -2, 62, -2).
+                addComponent(jButton8, Alignment.TRAILING, -2, 62, -2).
+                addComponent(jButton5, Alignment.TRAILING, -2, 62, -2).
+                addComponent(jButton0, -2, 62, -2)).addPreferredGap(ComponentPlacement.RELATED).
+                addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(jButton9, -2, 62, -2).
+                addComponent(jButton6, -2, 62, -2).addComponent(jButton3, Alignment.TRAILING, -2, 62, -2).
+                addComponent(enterButton, Alignment.TRAILING, -2, 62, -2))).addGroup(layout.createSequentialGroup().
+                addComponent(numberInput, -2, 73, -2).addPreferredGap(ComponentPlacement.RELATED).addComponent(l44).
+                addPreferredGap(ComponentPlacement.RELATED))).addGap(0, 7, 32767)));
+        layout.setVerticalGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().
+                addContainerGap().addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(b00).addComponent(l00).
+                addComponent(b10).addComponent(b20).addComponent(b30).addComponent(b40).addComponent(l10).addComponent(l20).
+                addComponent(l30).addComponent(l40)).addPreferredGap(ComponentPlacement.RELATED).
+                addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().
+                addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(b11).addComponent(l11).addComponent(b21).
+                addComponent(b31).addComponent(b41).addComponent(l31).addComponent(l41).addComponent(l21)).
+                addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).
+                addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(b42).
+                addComponent(b32).addComponent(b22).addComponent(l22).addComponent(l32).addComponent(l42)).
+                addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(b33).
+                addComponent(l33)).addGap(10, 10, 10).addGroup(layout.createParallelGroup(Alignment.LEADING).
+                addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(bestButton, -2, 34, -2).
+                addComponent(numberInput, -2, 34, -2).addComponent(l44))).addGroup(layout.createParallelGroup(Alignment.LEADING).
+                addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING).
+                addComponent(jButton1, -2, 37, -2).addComponent(jButton2, -2, 37, -2).
+                addComponent(jButton3, -2, 37, -2)).addGap(3, 3, 3).
+                addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(jButton4, -2, 37, -2).
+                addComponent(jButton5, -2, 37, -2).addComponent(jButton6, -2, 37, -2))).
+                addGroup(layout.createSequentialGroup().addComponent(autoScoreBox).addPreferredGap(ComponentPlacement.RELATED).
+                addComponent(deepABox).addPreferredGap(ComponentPlacement.UNRELATED).addComponent(jProgressBar1, -2, -1, -2))).
+                addGap(3, 3, 3).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().
+                addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(jButton7, -2, 37, -2).
+                addGroup(Alignment.TRAILING, layout.createParallelGroup(Alignment.BASELINE).addComponent(jButton8, -2, 37, -2).
+                addComponent(jButton9, -2, 37, -2))).addGap(2, 2, 2).
+                addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(jButton0, -2, 37, -2).
+                addComponent(jButtonBack, -2, 37, -2).addComponent(enterButton, -2, 37, -2))).
+                addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING).
+                addComponent(maxLabel, -2, -1, -2).addComponent(maxField, -2, -1, -2)).
+                addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).
+                addComponent(minField, -2, -1, -2).addComponent(minLabel, -2, -1, -2))))).
+                addGroup(layout.createSequentialGroup().addComponent(jScrollPane2, -2, 214, -2).
+                addPreferredGap(ComponentPlacement.RELATED).addComponent(startButton, -2, 38, -2))).
+                addGap(0, 20, 32767)).addComponent(jScrollPane1)).addContainerGap()));
         pack();
     }
 
@@ -379,7 +463,7 @@ public class Gui extends JFrame {
     }
 
     void print(int[] array) {
-        historyPane.setText(historyPane.getText() + "" + array[0] + array[1] + array[2] + array[3] + " - " + array[4] + ":" + array[5] + "\n");
+        historyPane.setText(historyPane.getText() + array[0] + array[1] + array[2] + array[3] + " - " + array[4] + ":" + array[5] + "\n");
     }
 
     void setScoreButtonsEnabled(boolean en) {
