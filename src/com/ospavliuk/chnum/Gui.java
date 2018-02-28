@@ -237,7 +237,7 @@ public class Gui extends JFrame {
         minField.setText("0");
         minField.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
-               minFieldMouseClicked();
+                minFieldMouseClicked();
             }
         });
         GroupLayout layout = new GroupLayout(getContentPane());
@@ -389,18 +389,12 @@ public class Gui extends JFrame {
     }
 
     void printVars(ArrayList<int[]> list) {
-        long start = System.currentTimeMillis();
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < list.size(); i++) {
-            int[] aList = list.get(i);
-            String text = "" + aList[0] + aList[1] + aList[2] + aList[3];
-            sb.append(aList.length == 4 ? text + "\n" : text + "-" + aList[4] + "\n");
-//            float f = 100.0F / (float) list.size() * (float) (i + 1);
-//            jProgressBar1.setValue((int) f);
-//            jProgressBar1.update(jProgressBar1.getGraphics());
+        for (int[] row : list) {
+            String text = "" + row[0] + row[1] + row[2] + row[3];
+            sb.append(row.length == 4 ? text + "\n" : text + "-" + row[4] + "\n");
         }
         variantsPane.setText(sb.toString());
-        System.out.println(System.currentTimeMillis() - start);
         game.isDARunning = false;
         resetLabels();
     }

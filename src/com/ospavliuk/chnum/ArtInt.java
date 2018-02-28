@@ -25,15 +25,15 @@ public class ArtInt {
         }
     }
 
-    public ArtInt(ArrayList<int[]> log) {
+    ArtInt(ArrayList<int[]> log) {
         this.log = log;
     }
 
 
     public ArrayList<int[]> getCombinations() {
         ArrayList<int[]> output = new ArrayList<>();
-        for(int[]current:LEGAL_COMBINATIONS){
-            if (compareToPrevious(current)){
+        for (int[] current : LEGAL_COMBINATIONS) {
+            if (compareToPrevious(current)) {
                 output.add(current);
             }
         }
